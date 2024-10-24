@@ -1,0 +1,57 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main{flex-grow: 1;}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: gray;
+}
+
+nav ul{
+    display: flex;
+    
+    li, a{
+        list-style-type: none;
+        text-decoration: none;
+        color: rgb(246, 234, 218);
+        padding-inline: 15px;
+    }
+}
+
+.abrir, .cerrar{
+    display: none;
+}
+
+@media(max-width: 465px){
+    .abrir, .cerrar{
+        display: block;
+    }
+
+    nav{
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+    /*CLASES A AGREGAR POR MEDIO DE JAVASCRIPT*/
+    .nav-visible{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .ocultar-boton{
+        display: none;
+    }
+    /********/
+
+    nav ul{
+        display: flex;
+        flex-direction: column;
+    }
+}
